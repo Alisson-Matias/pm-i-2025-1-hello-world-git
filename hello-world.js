@@ -7,6 +7,20 @@ nameInput.onkeyup = (event) => {
     }
 }
 
+nameInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        nameInput.value = '';
+    }
+    if (event.key === 'Enter') {
+        helloWorld();
+    }
+});
+
 const helloWorld = () => {
     messageP.innerText = `Hello World, ${nameInput.value}!`;
+}
+
+const limpaTudo = () => {
+    nameInput.value = ''
+    messageP.innerText = ''
 }
